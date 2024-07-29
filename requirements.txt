@@ -1,3 +1,5 @@
 streamlit
 spacy
 spacy_streamlit
+# Install spaCy model
+-e git+https://github.com/explosion/spacy-models.git#egg=en-core-web-sm
