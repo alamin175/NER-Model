@@ -7,7 +7,11 @@ import json
 
 # Function to load the spaCy model
 def load_model(model_path='en_core_web_sm'):
-    return spacy.load(model_path)
+    try:
+        return spacy.load(model_path)
+    except OSError as e:
+        st.error(f"Model loading failed: {e}")
+        return None
 
 # Initialize the model
 nlp = load_model()
